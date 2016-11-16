@@ -37,6 +37,7 @@ public class RunnerThread extends Thread implements Runnable {
         if (!useJni) {
             double c2 = nativeRun(1000, null, cookie);
             if (c2 != cookie) Log.d(TAG, "ERROR: wrong cookie returned "+c2+"!="+cookie);
+            else Log.d(TAG, "Correct cookie returned: "+cookie);
         } else {
             int[] nums = new int[1000];
             for (int i=0; i<nums.length; i++)
